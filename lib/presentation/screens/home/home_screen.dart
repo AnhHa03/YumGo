@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:yumgo/features/home/widgets/category_grid.dart';
-import 'package:yumgo/features/home/widgets/header.dart';
-import 'package:yumgo/features/home/widgets/restaurants_list.dart';
-import 'package:yumgo/features/home/widgets/section_title.dart';
+import 'package:yumgo/presentation/screens/home/widgets/category_grid.dart';
+import 'package:yumgo/presentation/screens/home/widgets/header.dart';
+import 'package:yumgo/presentation/screens/home/widgets/restaurants_list.dart';
+import 'package:yumgo/presentation/screens/home/widgets/section_title.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yumgo/features/home/home_screen.dart';
+import 'package:yumgo/presentation/screens/home/home_screen.dart';
 
 class YumGo extends StatelessWidget {
   const YumGo({super.key});

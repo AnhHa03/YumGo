@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yumgo/models/restaurant.dart';
+import 'package:yumgo/domain/models/restaurant.dart';
 
 class RestaurantItem extends StatelessWidget {
   final Restaurant restaurant;

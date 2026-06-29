@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:yumgo/data/fake_restaurants_list.dart';
-import 'package:yumgo/features/home/widgets/restaurant_item.dart';
-import 'package:yumgo/models/restaurant.dart';
+import 'package:yumgo/presentation/screens/home/data/fake_restaurants_list.dart';
+import 'package:yumgo/presentation/screens/home/widgets/restaurant_item.dart';
+import 'package:yumgo/domain/models/restaurant.dart';
 
 class RestaurantsList extends StatelessWidget {
   const RestaurantsList({super.key});
@@ -14,7 +14,8 @@ class RestaurantsList extends StatelessWidget {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
-        return RestaurantItem(restaurant: restaurants[1]);
+        Restaurant restaurant = restaurants[index];
+        return RestaurantItem(restaurant: restaurant);
       },
     );
   }
