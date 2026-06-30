@@ -1,35 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:yumgo/features/home/data/categories_list.dart';
 
 class CategoryGrid extends StatelessWidget {
   const CategoryGrid({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final categories = [
-      "Cơm",
-      "Hủ tíu/Bún bò",
-      "Ăn vặt",
-      "Pizza",
-      "Burger",
-      "Trà sữa",
-      "Healthy",
-    ];
-    return Padding(
-      padding: EdgeInsetsGeometry.only(top: 40.0),
+    final categories = getCategoriesList();
+    return Container(
+      height: 200.0,
+      padding: EdgeInsetsGeometry.only(top: 20.0),
       child: GridView.builder(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
+        scrollDirection: Axis.horizontal,
         itemCount: categories.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 4,
-          childAspectRatio: 0.8,
+          crossAxisCount: 2,
         ),
-        itemBuilder: (_, index) {
+        itemBuilder: (context, index) {
+          Category category = categories[index];
           return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(radius: 24.0, child: Icon(Icons.fastfood)),
-              SizedBox(height: 10.0),
-              Text(categories[index]),
+              Image.asset(category.imageURL, height: 60.0, width: 60.0),
+              Text(category.name, textAlign: TextAlign.center),
             ],
           );
         },

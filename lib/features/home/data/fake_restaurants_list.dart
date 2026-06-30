@@ -1,4 +1,4 @@
-import 'package:yumgo/domain/models/restaurant.dart';
+import 'package:yumgo/models/restaurant.dart';
 
 final List<Restaurant> restaurants = [
   Restaurant(

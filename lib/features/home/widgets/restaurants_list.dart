@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yumgo/features/home/data/fake_restaurants_list.dart';
 import 'package:yumgo/features/home/widgets/restaurant_item.dart';
-import 'package:yumgo/domain/models/restaurant.dart';
+import 'package:yumgo/models/restaurant.dart';
 
 class RestaurantsList extends StatelessWidget {
   const RestaurantsList({super.key});
