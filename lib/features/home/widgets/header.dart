@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -9,7 +10,13 @@ class Header extends StatelessWidget {
       children: [
         Row(
           children: [
-            Icon(Icons.add_location_alt_outlined),
+            // Icon(Icons.add_location_alt_outlined),
+            SvgPicture.asset(
+              'assets/icons/location.svg',
+              width: 24,
+              height: 24,
+              color: Theme.of(context).colorScheme.primary,
+            ),
             SizedBox(width: 10.0),
             Expanded(
               child: Text(
@@ -24,8 +31,19 @@ class Header extends StatelessWidget {
         SizedBox(height: 10.0),
         TextField(
           decoration: InputDecoration(
-            prefixIcon: Icon(Icons.search),
-            prefixIconColor: Colors.deepOrangeAccent,
+            prefixIcon: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              child: SvgPicture.asset(
+                'assets/icons/search.svg',
+                width: 24,
+                height: 24,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+            ),
+            // prefixIconConstraints: const BoxConstraints(
+            //   minHeight: 40,
+            //   maxWidth: 40,
+            // ),
             hintText: "Tìm kiếm...",
             hintStyle: TextStyle(color: Colors.grey, fontSize: 16.0),
             border: OutlineInputBorder(),

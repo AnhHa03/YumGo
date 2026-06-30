@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:yumgo/core/theme/app_colors.dart';
 import 'package:yumgo/models/restaurant.dart';
+import 'package:yumgo/widgets/divider_dot.dart';
 
 class RestaurantItem extends StatelessWidget {
   final Restaurant restaurant;
@@ -7,82 +9,97 @@ class RestaurantItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: 10.0),
-      height: 160.0,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(18.0),
-      ),
-      child: Row(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(18.0),
-              bottomLeft: Radius.circular(18.0),
-            ),
+    return Row(
+      children: [
+        Container(
+          // margin: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(18.0),
+            border: Border.all(color: AppColors.primary, width: 3),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.2),
+                blurRadius: 8,
+                offset: Offset(0, 3),
+              ),
+            ],
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(14.0),
             child: Image.network(
               restaurant.imageURL.isNotEmpty
                   ? restaurant.imageURL
                   : 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092',
-              height: 160.0,
-              width: 130.0,
+              height: 120.0,
+              width: 120.0,
               fit: BoxFit.cover,
             ),
           ),
-          Flexible(
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    restaurant.name,
+        ),
+        Flexible(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  restaurant.name,
+                  style: Theme.of(context).textTheme.bodyLarge,
+                  maxLines: 1,
+                  overflow: TextOverflow.clip,
+                ),
+                Text(
+                  restaurant.description,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        const Icon(Icons.star, color: Colors.amber),
+                        SizedBox(width: 4.0),
+                        Text(
+                          restaurant.rating.toString(),
+                          style: Theme.of(context).textTheme.bodySmall,
+                        ),
+                      ],
+                    ),
+                    DividerDot(),
+
+                    Text(
+                      "${restaurant.address} km",
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                    DividerDot(),
+                    Text(
+                      "${restaurant.time} phút",
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10.0),
+                InkWell(
+                  onTap: () {},
+                  child: Text(
+                    "Xem ngay",
                     style: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  Text(
-                    restaurant.description,
-                    style: TextStyle(fontSize: 16.0),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      const Icon(Icons.star, color: Colors.amber),
-                      SizedBox(width: 4.0),
-                      Text(restaurant.rating.toString()),
-                      SizedBox(width: 20.0),
-                      Text("${restaurant.address}km"),
-                      SizedBox(width: 20.0),
-                      Text("${restaurant.time} phút"),
-                    ],
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: Text(
-                      "Xem ngay",
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.w400,
-                        decoration: TextDecoration.underline,
-                        decorationColor: Colors.grey,
-                      ),
+                      color: AppColors.grey,
+                      fontSize: 14.0,
+                      fontWeight: FontWeight.w400,
+                      decoration: TextDecoration.underline,
+                      decorationColor: AppColors.greyLight,
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
     ;
   }

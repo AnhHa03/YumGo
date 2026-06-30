@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yumgo/core/theme/app_theme.dart';
 import 'package:yumgo/features/home/home_screen.dart';
 
 class YumGo extends StatelessWidget {
@@ -6,6 +7,6 @@ class YumGo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: HomeScreen());
+    return MaterialApp(theme: AppTheme.lightTheme, home: HomeScreen());
   }
 }
