@@ -4,8 +4,8 @@ import 'package:yumgo/core/theme/app_colors.dart';
 import 'package:yumgo/core/theme/constants/app_icons.dart';
 import 'package:yumgo/widgets/app_icon.dart';
 
-class Header extends StatelessWidget {
-  const Header({super.key});
+class HomeHeader extends StatelessWidget {
+  const HomeHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
