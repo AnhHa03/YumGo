@@ -1,33 +1,29 @@
+import 'package:yumgo/core/theme/constants/app_images.dart';
+
 class Category {
   final String name;
-  final imageURL;
+  final image;
 
-  Category({required this.name, required this.imageURL});
+  Category({required this.name, required this.image});
 }
 
 final List<Category> categories = [
-  Category(name: "Cơm", imageURL: 'assets/images/categories/com_tam.png'),
-  Category(name: "Bánh mì", imageURL: 'assets/images/categories/banh_mi.png'),
-  Category(name: "Bún/Mì/Phở", imageURL: 'assets/images/categories/pho.png'),
-  Category(name: "Burger", imageURL: 'assets/images/categories/burger.png'),
-  Category(name: "Trà sữa", imageURL: 'assets/images/categories/tra_sua.png'),
-  Category(
-    name: "Ăn vặt",
-    imageURL: 'assets/images/categories/banh_trang_tron.png',
-  ),
-  Category(name: "Pizza", imageURL: 'assets/images/categories/pizza.png'),
-  Category(name: "Healthy", imageURL: 'assets/images/categories/healthy.png'),
-  Category(name: "Hủ tíu", imageURL: 'assets/images/categories/hu_tiu.png'),
-  Category(name: "Gà", imageURL: 'assets/images/categories/ga_ran.png'),
-  Category(name: "Lẩu", imageURL: 'assets/images/categories/lau.png'),
-  Category(name: "Hải sản", imageURL: 'assets/images/categories/hai_san.png'),
-  Category(
-    name: "Tráng miệng",
-    imageURL: 'assets/images/categories/trang_mieng.png',
-  ),
-  Category(name: "Sinh tố", imageURL: 'assets/images/categories/sinh_to.png'),
-  Category(name: "Chè", imageURL: 'assets/images/categories/che.png'),
-  Category(name: "Cà phê", imageURL: 'assets/images/categories/ca_phe.png'),
+  Category(name: "Cơm", image: AppImages.com_category),
+  Category(name: "Bánh mì", image: AppImages.banh_mi_category),
+  Category(name: "Bún/Mì/Phở", image: AppImages.bun_mi__pho_category),
+  Category(name: "Burger", image: AppImages.burger_category),
+  Category(name: "Trà sữa", image: AppImages.tra_sua_category),
+  Category(name: "Ăn vặt", image: AppImages.an_vat_category),
+  Category(name: "Pizza", image: AppImages.pizza_category),
+  Category(name: "Healthy", image: AppImages.healthy_category),
+  Category(name: "Hủ tíu", image: AppImages.hu_tiu_category),
+  Category(name: "Gà", image: AppImages.ga_category),
+  Category(name: "Lẩu", image: AppImages.lau_Category),
+  Category(name: "Hải sản", image: AppImages.hai_san_category),
+  Category(name: "Tráng miệng", image: AppImages.trang_mieng_category),
+  Category(name: "Sinh tố", image: AppImages.sinh_to_category),
+  Category(name: "Chè", image: AppImages.che_category),
+  Category(name: "Cà phê", image: AppImages.ca_phe_category),
 ];
 
 List<Category> getCategoriesList() {

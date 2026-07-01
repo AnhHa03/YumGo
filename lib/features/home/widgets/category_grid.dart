@@ -22,7 +22,7 @@ class CategoryGrid extends StatelessWidget {
           return Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(category.imageURL, height: 65.0, width: 65.0),
+              Image.asset(category.image, height: 65.0, width: 65.0),
               Text(
                 category.name,
                 textAlign: TextAlign.center,

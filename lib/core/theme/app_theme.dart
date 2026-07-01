@@ -33,6 +33,6 @@ class AppTheme {
       ),
     ),
 
-    iconTheme: IconThemeData(color: AppColors.primaryDark),
+    iconTheme: IconThemeData(color: AppColors.primaryDark, size: 24),
   );
 }

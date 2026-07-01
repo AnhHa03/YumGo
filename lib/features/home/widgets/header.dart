@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:yumgo/core/theme/app_colors.dart';
+import 'package:yumgo/core/theme/constants/app_icons.dart';
+import 'package:yumgo/widgets/app_icon.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -10,12 +13,10 @@ class Header extends StatelessWidget {
       children: [
         Row(
           children: [
-            // Icon(Icons.add_location_alt_outlined),
-            SvgPicture.asset(
-              'assets/icons/location.svg',
-              width: 24,
-              height: 24,
-              color: Theme.of(context).colorScheme.primary,
+            AppIcon(
+              icon: AppIcons.location,
+              size: 24,
+              color: AppColors.primaryDark,
             ),
             SizedBox(width: 10.0),
             Expanded(
@@ -33,17 +34,12 @@ class Header extends StatelessWidget {
           decoration: InputDecoration(
             prefixIcon: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: SvgPicture.asset(
-                'assets/icons/search.svg',
-                width: 24,
-                height: 24,
-                color: Theme.of(context).colorScheme.primary,
+              child: AppIcon(
+                icon: AppIcons.search,
+                size: 24,
+                color: AppColors.primaryDark,
               ),
             ),
-            // prefixIconConstraints: const BoxConstraints(
-            //   minHeight: 40,
-            //   maxWidth: 40,
-            // ),
             hintText: "Tìm kiếm...",
             hintStyle: TextStyle(color: Colors.grey, fontSize: 16.0),
             border: OutlineInputBorder(),
