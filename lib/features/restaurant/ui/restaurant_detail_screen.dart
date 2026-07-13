@@ -16,10 +16,10 @@ class _RestaurantDetailScreenState extends State<RestaurantDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: ListView(
         children: [
           RestaurantHeader(restaurant: restaurant),
-          Padding(padding: const EdgeInsets.all(10.0), child: FoodList()),
+          Padding(padding: const EdgeInsets.all(20.0), child: FoodList()),
         ],
       ),
     );

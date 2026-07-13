@@ -15,7 +15,6 @@ class RestaurantItem extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            // margin: EdgeInsets.all(10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(18.0),
               border: Border.all(color: AppColors.primary, width: 3),
