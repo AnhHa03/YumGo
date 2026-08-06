@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yumgo/core/theme/app_colors.dart';
 import 'package:yumgo/core/theme/constants/app_icons.dart';
+import 'package:yumgo/features/search/ui/search_screen.dart';
 import 'package:yumgo/widgets/app_icon.dart';
 
-class HomeHeader extends StatelessWidget {
-  const HomeHeader({super.key});
+class SearchHeader extends StatelessWidget {
+  final VoidCallback? onTap;
+  final FocusNode? focusNode;
+  const SearchHeader({super.key, this.onTap, this.focusNode});
 
   @override
   Widget build(BuildContext context) {
@@ -30,19 +33,26 @@ class HomeHeader extends StatelessWidget {
           ],
         ),
         SizedBox(height: 10.0),
-        TextField(
-          decoration: InputDecoration(
-            prefixIcon: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: AppIcon(
-                icon: AppIcons.search,
-                size: 24,
-                color: AppColors.primaryDark,
+        GestureDetector(
+          onTap: onTap,
+          child: AbsorbPointer(
+            absorbing: onTap != null,
+            child: TextField(
+              focusNode: focusNode,
+              decoration: InputDecoration(
+                prefixIcon: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                  child: AppIcon(
+                    icon: AppIcons.search,
+                    size: 24,
+                    color: AppColors.primaryDark,
+                  ),
+                ),
+                hintText: "Tìm kiếm...",
+                hintStyle: TextStyle(color: Colors.grey, fontSize: 16.0),
+                border: OutlineInputBorder(),
               ),
             ),
-            hintText: "Tìm kiếm...",
-            hintStyle: TextStyle(color: Colors.grey, fontSize: 16.0),
-            border: OutlineInputBorder(),
           ),
         ),
       ],

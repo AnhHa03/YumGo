@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yumgo/features/home/widgets/category_grid.dart';
-import 'package:yumgo/features/home/widgets/home_header.dart';
+import 'package:yumgo/features/search/ui/search_screen.dart';
+import 'package:yumgo/widgets/search_header.dart';
 import 'package:yumgo/features/home/widgets/restaurants_list.dart';
 import 'package:yumgo/features/home/widgets/section_title.dart';
 
@@ -14,7 +15,14 @@ class HomeScreen extends StatelessWidget {
         margin: EdgeInsets.all(20.0),
         child: ListView(
           children: [
-            HomeHeader(),
+            SearchHeader(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const SearchScreen()),
+                );
+              },
+            ),
             CategoryGrid(),
             SectionTitle(),
             RestaurantsList(),
