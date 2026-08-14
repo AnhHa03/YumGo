@@ -4,6 +4,7 @@ import 'package:yumgo/core/theme/app_colors.dart';
 import 'package:yumgo/core/theme/constants/app_icons.dart';
 import 'package:yumgo/features/search/ui/search_screen.dart';
 import 'package:yumgo/widgets/app_icon.dart';
+import 'package:yumgo/widgets/app_search_field.dart';
 
 class SearchHeader extends StatelessWidget {
   final VoidCallback? onTap;
@@ -37,22 +38,7 @@ class SearchHeader extends StatelessWidget {
           onTap: onTap,
           child: AbsorbPointer(
             absorbing: onTap != null,
-            child: TextField(
-              focusNode: focusNode,
-              decoration: InputDecoration(
-                prefixIcon: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                  child: AppIcon(
-                    icon: AppIcons.search,
-                    size: 24,
-                    color: AppColors.primaryDark,
-                  ),
-                ),
-                hintText: "Tìm kiếm...",
-                hintStyle: TextStyle(color: Colors.grey, fontSize: 16.0),
-                border: OutlineInputBorder(),
-              ),
-            ),
+            child: AppSearchField(hint: "Tìm kiếm...", focusNode: focusNode),
           ),
         ),
       ],
