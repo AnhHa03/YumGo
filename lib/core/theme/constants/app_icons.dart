@@ -5,4 +5,5 @@ class AppIcons {
   static const String star = 'assets/icons/star.svg';
   static const String add_rectangle = 'assets/icons/add_rectangle.svg';
   static const String clear_rectangle = 'assets/icons/clear_rectangle.svg';
+  static const String remove = 'assets/icons/remove.svg';
 }
