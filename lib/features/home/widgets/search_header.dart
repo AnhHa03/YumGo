@@ -9,7 +9,13 @@ import 'package:yumgo/widgets/app_search_field.dart';
 class SearchHeader extends StatelessWidget {
   final VoidCallback? onTap;
   final FocusNode? focusNode;
-  const SearchHeader({super.key, this.onTap, this.focusNode});
+  final TextEditingController controller;
+  const SearchHeader({
+    super.key,
+    this.onTap,
+    this.focusNode,
+    required this.controller,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +44,11 @@ class SearchHeader extends StatelessWidget {
           onTap: onTap,
           child: AbsorbPointer(
             absorbing: onTap != null,
-            child: AppSearchField(hint: "Tìm kiếm...", focusNode: focusNode),
+            child: AppSearchField(
+              hint: "Tìm kiếm...",
+              focusNode: focusNode,
+              controller: controller,
+            ),
           ),
         ),
       ],

@@ -7,11 +7,18 @@ import 'package:yumgo/widgets/app_icon.dart';
 class AppSearchField extends StatelessWidget {
   final String hint;
   final FocusNode? focusNode;
-  const AppSearchField({super.key, required this.hint, this.focusNode});
+  final TextEditingController controller;
+  const AppSearchField({
+    super.key,
+    required this.hint,
+    this.focusNode,
+    required this.controller,
+  });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
       focusNode: focusNode,
       decoration: InputDecoration(
         prefixIcon: Padding(
@@ -26,13 +33,17 @@ class AppSearchField extends StatelessWidget {
         hintStyle: TextStyle(color: Colors.grey, fontSize: 16.0),
         suffixIcon: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: AppIcon(
-            icon: AppIcons.remove,
-            size: 16.0,
-            color: AppColors.grey,
+          child: GestureDetector(
+            onTap: () {
+              controller.clear();
+            },
+            child: AppIcon(
+              icon: AppIcons.remove,
+              size: 16.0,
+              color: AppColors.grey,
+            ),
           ),
         ),
-        // suffixIconConstraints: BoxConstraints(minHeight: 30.0, minWidth: 30.0),
         border: OutlineInputBorder(),
       ),
     );

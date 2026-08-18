@@ -5,10 +5,12 @@ import 'package:yumgo/features/search/data/histories.dart';
 import 'package:yumgo/widgets/app_icon.dart';
 
 class SearchHistory extends StatelessWidget {
+  final ValueChanged<String> onTap;
   final VoidCallback onClear;
   final ValueChanged<String> onRemove;
   const SearchHistory({
     super.key,
+    required this.onTap,
     required this.onClear,
     required this.onRemove,
   });
@@ -41,9 +43,12 @@ class SearchHistory extends StatelessWidget {
                 size: 18,
                 color: AppColors.black,
               ),
-              title: Text(
-                history.key,
-                style: Theme.of(context).textTheme.bodyMedium,
+              title: GestureDetector(
+                onTap: () => onTap(history.key),
+                child: Text(
+                  history.key,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
               ),
               trailing: GestureDetector(
                 onTap: () => onRemove(history.key),

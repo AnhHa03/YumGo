@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (_) => const SearchScreen()),
                 );
               },
+              controller: TextEditingController(),
             ),
             CategoryGrid(),
             SectionTitle(),

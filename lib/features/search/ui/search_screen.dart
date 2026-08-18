@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yumgo/features/search/data/histories.dart';
+import 'package:yumgo/features/search/widgets/search_categories.dart';
 import 'package:yumgo/features/search/widgets/search_history.dart';
 import 'package:yumgo/widgets/app_search_field.dart';
 
@@ -12,11 +13,13 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen> {
   late FocusNode _focusNode;
+  late TextEditingController _searchController;
 
   @override
   void initState() {
     super.initState();
     _focusNode = FocusNode();
+    _searchController = TextEditingController();
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _focusNode.requestFocus();
@@ -26,20 +29,29 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   void dispose() {
     _focusNode.dispose();
+    _searchController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    final topPadding = MediaQuery.of(context).padding.top;
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.fromLTRB(20.0, topPadding + 20.0, 20.0, 20.0),
-        child: Column(
+        margin: EdgeInsets.all(20.0),
+        child: ListView(
           children: [
-            AppSearchField(hint: "Tìm kiếm...", focusNode: _focusNode),
+            AppSearchField(
+              hint: "Tìm kiếm...",
+              focusNode: _focusNode,
+              controller: _searchController,
+            ),
             SizedBox(height: 20.0),
             SearchHistory(
+              onTap: (historyKey) {
+                setState(() {
+                  _searchController.text = historyKey;
+                });
+              },
               onClear: () {
                 setState(() {
                   searchHistories.clear();
@@ -53,6 +65,8 @@ class _SearchScreenState extends State<SearchScreen> {
                 }),
               },
             ),
+            SizedBox(height: 20),
+            SearchCategories(),
           ],
         ),
       ),
