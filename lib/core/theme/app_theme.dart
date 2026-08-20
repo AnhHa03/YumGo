@@ -8,8 +8,8 @@ class AppTheme {
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
 
     appBarTheme: const AppBarTheme(
-      backgroundColor: AppColors.primary,
-      foregroundColor: AppColors.white,
+      backgroundColor: AppColors.white,
+      foregroundColor: AppColors.black,
       elevation: 0,
     ),
 

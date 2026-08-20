@@ -20,6 +20,8 @@ class AppColors {
   static const red = Color(0xFFFF0000);
 
   static const greyLight = Color(0xFFCCCCCC);
+  static const greyLight60 = Color(0xFFE5E5E5);
+  static const greyLight80 = Color(0xFFF5F5F5);
 
   static const textPrimary = Color(0xFF035C27);
   static const textSecondary = Color(0xFFFF4D00);

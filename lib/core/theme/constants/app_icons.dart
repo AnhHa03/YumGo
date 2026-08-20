@@ -12,4 +12,6 @@ class AppIcons {
   static const String notepad_outline = 'assets/icons/notepad_outline.svg';
   static const String user = 'assets/icons/user.svg';
   static const String user_outline = 'assets/icons/user_outline.svg';
+  static const String direction_right = 'assets/icons/direction_right.svg';
+  static const String security = 'assets/icons/security.svg';
 }
