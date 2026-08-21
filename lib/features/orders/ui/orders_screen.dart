@@ -26,6 +26,8 @@ class _OrdersScreenState extends State<OrdersScreen> {
               Tab(text: "Lịch sử"),
             ],
           ),
+          // search mã đơn hàng
+
           // actions: [
           //   IconButton(
           //     onPressed: () {},
@@ -37,7 +39,12 @@ class _OrdersScreenState extends State<OrdersScreen> {
           //   ),
           // ],
         ),
-        body: TabBarView(children: [OngoingOrdersView(), HistoryOrdersView()]),
+        body: Container(
+          decoration: BoxDecoration(color: AppColors.background),
+          child: TabBarView(
+            children: [OngoingOrdersView(), HistoryOrdersView()],
+          ),
+        ),
       ),
     );
   }

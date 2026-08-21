@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:yumgo/core/theme/app_colors.dart';
 import 'package:yumgo/core/theme/constants/app_icons.dart';
-import 'package:yumgo/features/orders/data/fake_food_list.dart';
+import 'package:yumgo/features/home/data/fake_restaurants_list.dart';
+import 'package:yumgo/features/orders/models/fake_food_list.dart';
 import 'package:yumgo/features/orders/widgets/food_order_item.dart';
+import 'package:yumgo/features/restaurant/ui/restaurant_detail_screen.dart';
+import 'package:yumgo/models/order.dart';
+import 'package:yumgo/models/restaurant.dart';
 import 'package:yumgo/widgets/app_icon.dart';
 
 class OrderItem extends StatelessWidget {
+  final ValueChanged<Order> onTap;
+  final Order order;
   final visibleFoods = foods.take(2).toList();
-  OrderItem({super.key});
+  OrderItem({super.key, required this.order, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        // go to order_details_screen
-      },
+      onTap: () => onTap(order),
       child: Container(
         margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 0),
         padding: EdgeInsets.all(16.0),
@@ -50,7 +54,14 @@ class OrderItem extends StatelessWidget {
             SizedBox(height: 12),
             GestureDetector(
               onTap: () {
-                // go to restaurant_detail_screen
+                Restaurant restaurant = getRestaurantsList()[0];
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) =>
+                        RestaurantDetailScreen(restaurant: restaurant),
+                  ),
+                );
               },
               child: Row(
                 children: [

@@ -84,17 +84,14 @@ class RestaurantItem extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 10.0),
-                  InkWell(
-                    onTap: () {},
-                    child: Text(
-                      "Xem ngay",
-                      style: TextStyle(
-                        color: AppColors.grey,
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.w400,
-                        decoration: TextDecoration.underline,
-                        decorationColor: AppColors.greyLight,
-                      ),
+                  Text(
+                    "Xem ngay",
+                    style: TextStyle(
+                      color: AppColors.grey,
+                      fontSize: 14.0,
+                      fontWeight: FontWeight.w400,
+                      decoration: TextDecoration.underline,
+                      decorationColor: AppColors.greyLight,
                     ),
                   ),
                 ],

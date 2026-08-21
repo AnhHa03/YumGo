@@ -1,4 +1,5 @@
 import 'package:yumgo/models/food.dart';
+import 'package:yumgo/models/order.dart';
 
 final List<Food> foods = [
   Food(
@@ -30,4 +31,12 @@ final List<Food> foods = [
     rating: '49',
     favourite: 20,
   ),
+];
+
+final List<Order> orders = [
+  Order(order_id: "#23964-3325753"),
+  Order(order_id: "#25753-0364452"),
+  Order(order_id: "#25753-0364452"),
+  Order(order_id: "#25753-0364452"),
+  Order(order_id: "#25753-0364452"),
 ];

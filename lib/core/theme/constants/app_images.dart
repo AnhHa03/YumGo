@@ -17,4 +17,5 @@ class AppImages {
   static const String sinh_to_category = 'assets/images/categories/sinh_to.png';
   static const String che_category = 'assets/images/categories/che.png';
   static const String ca_phe_category = 'assets/images/categories/ca_phe.png';
+  static const String delivery_man = 'assets/images/delivery_man.png';
 }

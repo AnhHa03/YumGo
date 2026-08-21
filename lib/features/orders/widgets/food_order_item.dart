@@ -12,11 +12,14 @@ class FoodOrderItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.network(
-            food.imageURL,
-            height: 100.0,
-            width: 100.0,
-            fit: BoxFit.cover,
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Image.network(
+              food.imageURL,
+              height: 100.0,
+              width: 100.0,
+              fit: BoxFit.cover,
+            ),
           ),
           SizedBox(height: 10),
           Text(
