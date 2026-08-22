@@ -15,7 +15,7 @@ class DeliveryTracking extends StatelessWidget {
     final info = orderStatusInfo[status]!;
     final currentIndex = OrderStatus.values.indexOf(status);
     return Container(
-      padding: EdgeInsets.fromLTRB(20, 20, 20, 30),
+      padding: EdgeInsets.fromLTRB(20, 20, 20, 40),
       decoration: BoxDecoration(
         color: AppColors.white,
         borderRadius: BorderRadius.only(
@@ -48,7 +48,7 @@ class DeliveryTracking extends StatelessWidget {
                   ],
                 ),
               ),
-              Image.asset(info.image, height: 90.0, width: 90.0),
+              Image.asset(info.image, height: 70.0, width: 70.0),
             ],
           ),
           SizedBox(height: 20.0),
@@ -73,7 +73,7 @@ class DeliveryTracking extends StatelessWidget {
               ),
               _connector(stepIndex: 3, currentIndex: currentIndex),
               _trackingIcon(
-                icon: AppIcons.food_delivery,
+                icon: AppIcons.home_check,
                 stepIndex: 3,
                 currentIndex: currentIndex,
               ),
@@ -121,7 +121,7 @@ Widget _connector({required int stepIndex, required int currentIndex}) {
       height: 6.0,
       decoration: BoxDecoration(
         color: isCompleted ? AppColors.primary : AppColors.greyLight60,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(12.0),
       ),
     ),
   );

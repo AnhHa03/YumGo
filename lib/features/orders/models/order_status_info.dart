@@ -17,17 +17,17 @@ final Map<OrderStatus, OrderStatusInfo> orderStatusInfo = {
   OrderStatus.confirmed: OrderStatusInfo(
     title: "Đã nhận đơn",
     subtitle: "Quán đã nhận được đơn hàng của bạn.",
-    image: AppImages.delivery_man,
+    image: AppImages.order_food,
   ),
   OrderStatus.preparing: OrderStatusInfo(
     title: "Quán đang chuẩn bị món",
     subtitle: "Món ăn đang được chuẩn bị.",
-    image: AppImages.delivery_man,
+    image: AppImages.chef,
   ),
   OrderStatus.delivering: OrderStatusInfo(
     title: 'Tài xế đang giao',
     subtitle: 'Tài xế đang trên đường giao đơn cho bạn.',
-    image: AppImages.delivery_man,
+    image: AppImages.delivery_bike,
   ),
 
   OrderStatus.delivered: OrderStatusInfo(

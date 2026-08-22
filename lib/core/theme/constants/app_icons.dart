@@ -14,8 +14,11 @@ class AppIcons {
   static const String user_outline = 'assets/icons/user_outline.svg';
   static const String direction_right = 'assets/icons/direction_right.svg';
   static const String security = 'assets/icons/security.svg';
+  static const String home_check = 'assets/icons/home_check.svg';
   static const String task_check = 'assets/icons/task_check.svg';
   static const String delivery_bike = 'assets/icons/delivery_bike.svg';
   static const String food_cloche = 'assets/icons/food_cloche.svg';
   static const String food_delivery = 'assets/icons/food_delivery.svg';
+  static const String paid = 'assets/icons/paid.svg';
+  static const String copy_outline = 'assets/icons/copy_outline.svg';
 }
