@@ -15,7 +15,7 @@ class RestaurantHeader extends StatelessWidget {
       height: 260.0,
       width: width,
       decoration: BoxDecoration(
-        color: AppColors.background,
+        color: AppColors.backgroundWhite,
         boxShadow: [
           BoxShadow(
             color: AppColors.black.withOpacity(0.1),

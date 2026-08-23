@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yumgo/core/theme/app_colors.dart';
 import 'package:yumgo/core/theme/constants/app_icons.dart';
+import 'package:yumgo/features/orders/ui/order_search_screen.dart';
 import 'package:yumgo/features/orders/widgets/history_orders_view.dart';
 import 'package:yumgo/features/orders/widgets/ongoing_orders_view.dart';
 import 'package:yumgo/widgets/app_icon.dart';
@@ -26,21 +27,25 @@ class _OrdersScreenState extends State<OrdersScreen> {
               Tab(text: "Lịch sử"),
             ],
           ),
-          // search mã đơn hàng
 
-          // actions: [
-          //   IconButton(
-          //     onPressed: () {},
-          //     icon: AppIcon(
-          //       icon: AppIcons.search,
-          //       size: 30.0,
-          //       color: AppColors.primaryDark,
-          //     ),
-          //   ),
-          // ],
+          actions: [
+            IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => OrderSearchScreen()),
+                );
+              },
+              icon: AppIcon(
+                icon: AppIcons.search,
+                size: 30.0,
+                color: AppColors.primaryDark,
+              ),
+            ),
+          ],
         ),
         body: Container(
-          decoration: BoxDecoration(color: AppColors.background),
+          decoration: BoxDecoration(color: AppColors.backgroundGrey),
           child: TabBarView(
             children: [OngoingOrdersView(), HistoryOrdersView()],
           ),

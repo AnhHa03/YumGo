@@ -17,12 +17,9 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Chi tiết đơn hàng"),
-        scrolledUnderElevation: 0,
-      ),
+      appBar: AppBar(title: Text("Chi tiết đơn hàng")),
       body: Container(
-        decoration: BoxDecoration(color: AppColors.background),
+        decoration: BoxDecoration(color: AppColors.backgroundGrey),
         child: SingleChildScrollView(
           padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
           child: Column(
