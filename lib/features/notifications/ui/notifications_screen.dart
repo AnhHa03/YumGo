@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yumgo/core/theme/app_colors.dart';
 import 'package:yumgo/core/theme/constants/app_icons.dart';
+import 'package:yumgo/core/theme/constants/app_images.dart';
 import 'package:yumgo/features/notifications/data/fake_notification_list.dart';
 import 'package:yumgo/features/notifications/widgets/notification_item.dart';
 import 'package:yumgo/features/orders/ui/order_detail_screen.dart';
@@ -48,27 +49,49 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             ),
         ],
       ),
-      body: Container(
-        decoration: BoxDecoration(color: AppColors.backgroundGrey),
-        child: ListView.builder(
-          itemCount: _notifications.length,
-          itemBuilder: (context, index) {
-            Notif _notif = _notifications[index];
-            return NotificationItem(
-              notif: _notif,
-              onTapNotif: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => OrderDetailScreen()),
-                );
-                setState(() {
-                  _notif.isRead = true;
-                });
-              },
-            );
-          },
-        ),
-      ),
+      body: (notifications.isEmpty)
+          ? Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Image.asset(
+                    AppImages.non_notification,
+                    height: 100,
+                    width: 100,
+                  ),
+                  SizedBox(height: 16),
+                  Text(
+                    "Chưa có thông báo",
+                    style: TextStyle(
+                      color: AppColors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
+            )
+          : Container(
+              decoration: BoxDecoration(color: AppColors.backgroundGrey),
+              child: ListView.builder(
+                itemCount: _notifications.length,
+                itemBuilder: (context, index) {
+                  Notif _notif = _notifications[index];
+                  return NotificationItem(
+                    notif: _notif,
+                    onTapNotif: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => OrderDetailScreen()),
+                      );
+                      setState(() {
+                        _notif.isRead = true;
+                      });
+                    },
+                  );
+                },
+              ),
+            ),
     );
   }
 }
