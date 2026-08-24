@@ -14,6 +14,7 @@ class OrdersScreen extends StatefulWidget {
 }
 
 class _OrdersScreenState extends State<OrdersScreen> {
+  final isNotEmpty = true;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -29,6 +30,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
           ),
 
           actions: [
+if (!isNotEmpty)
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -39,12 +41,14 @@ class _OrdersScreenState extends State<OrdersScreen> {
               child: Padding(
                 padding: const EdgeInsets.only(right: 20),
                 child: AppIcon(
+
+            
+              
                   icon: AppIcons.search,
                   size: 30.0,
                   color: AppColors.primaryDark,
                 ),
               ),
-            ),
           ],
         ),
         body: Container(
