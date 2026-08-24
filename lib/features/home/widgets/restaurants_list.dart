@@ -29,11 +29,8 @@ class RestaurantsList extends StatelessWidget {
           },
         );
       },
-      separatorBuilder: (context, index) => const Divider(
-        thickness: 0.2,
-        color: AppColors.greyLight,
-        height: 20.0,
-      ),
+      separatorBuilder: (context, index) =>
+          const Divider(thickness: 0.2, color: AppColors.greyLight, height: 0),
     );
   }
 }
