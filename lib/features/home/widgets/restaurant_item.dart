@@ -32,8 +32,8 @@ class RestaurantItem extends StatelessWidget {
                 restaurant.imageURL.isNotEmpty
                     ? restaurant.imageURL
                     : 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092',
-                height: 100.0,
-                width: 100.0,
+                height: 120.0,
+                width: 120.0,
                 fit: BoxFit.cover,
               ),
             ),
@@ -84,14 +84,17 @@ class RestaurantItem extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 10.0),
-                  Text(
-                    "Xem ngay",
-                    style: TextStyle(
-                      color: AppColors.grey,
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w400,
-                      decoration: TextDecoration.underline,
-                      decorationColor: AppColors.greyLight,
+                  InkWell(
+                    onTap: () {},
+                    child: Text(
+                      "Xem ngay",
+                      style: TextStyle(
+                        color: AppColors.grey,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w400,
+                        decoration: TextDecoration.underline,
+                        decorationColor: AppColors.greyLight,
+                      ),
                     ),
                   ),
                 ],

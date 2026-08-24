@@ -3,16 +3,14 @@ import 'app_colors.dart';
 
 class AppTheme {
   static ThemeData lightTheme = ThemeData(
-    scaffoldBackgroundColor: AppColors.backgroundWhite,
+    scaffoldBackgroundColor: AppColors.background,
 
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
 
     appBarTheme: const AppBarTheme(
-      backgroundColor: AppColors.white,
-      foregroundColor: AppColors.black,
+      backgroundColor: AppColors.primary,
+      foregroundColor: AppColors.white,
       elevation: 0,
-      scrolledUnderElevation: 0,
-      iconTheme: IconThemeData(color: AppColors.primaryDark),
     ),
 
     textTheme: const TextTheme(

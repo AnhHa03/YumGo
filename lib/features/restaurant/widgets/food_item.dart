@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yumgo/core/theme/app_colors.dart';
 import 'package:yumgo/core/theme/constants/app_icons.dart';
-import 'package:yumgo/models/food.dart';
+import 'package:yumgo/features/restaurant/data/food.dart';
 import 'package:yumgo/features/restaurant/widgets/add_to_cart_button.dart';
 import 'package:yumgo/widgets/app_icon.dart';
 
