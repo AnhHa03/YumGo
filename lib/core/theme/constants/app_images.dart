@@ -21,4 +21,5 @@ class AppImages {
   static const String chef = 'assets/images/chef.png';
   static const String delivery_bike = 'assets/images/delivery_bike.png';
   static const String order_food = 'assets/images/order_food.png';
+  static const String yumgo_logo = 'assets/images/yumgo_logo.png';
 }
