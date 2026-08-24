@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yumgo/core/theme/app_colors.dart';
 import 'package:yumgo/features/restaurant/data/fake_food_list.dart';
-import 'package:yumgo/models/food.dart';
+import 'package:yumgo/features/restaurant/data/food.dart';
 import 'package:yumgo/features/restaurant/widgets/food_item.dart';
 
 class FoodList extends StatelessWidget {
