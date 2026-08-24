@@ -21,4 +21,7 @@ class AppIcons {
   static const String food_delivery = 'assets/icons/food_delivery.svg';
   static const String paid = 'assets/icons/paid.svg';
   static const String copy_outline = 'assets/icons/copy_outline.svg';
+  static const String notification = 'assets/icons/notification.svg';
+  static const String notification_outline =
+      'assets/icons/notification_outline.svg';
 }

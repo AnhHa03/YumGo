@@ -3,6 +3,7 @@ import 'package:yumgo/core/theme/app_colors.dart';
 import 'package:yumgo/core/theme/constants/app_icons.dart';
 import 'package:yumgo/features/account/ui/account_screen.dart';
 import 'package:yumgo/features/home/ui/home_screen.dart';
+import 'package:yumgo/features/notifications/ui/notifications_screen.dart';
 import 'package:yumgo/features/orders/ui/orders_screen.dart';
 import 'package:yumgo/widgets/app_icon.dart';
 
@@ -14,7 +15,12 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  final List<Widget> _screens = [HomeScreen(), OrdersScreen(), AccountScreen()];
+  final List<Widget> _screens = [
+    HomeScreen(),
+    OrdersScreen(),
+    NotificationsScreen(),
+    AccountScreen(),
+  ];
   int _selectedIndex = 0;
 
   @override
@@ -57,6 +63,19 @@ class _MainScreenState extends State<MainScreen> {
               color: AppColors.primaryDark,
             ),
             label: "Đơn hàng",
+          ),
+          NavigationDestination(
+            icon: AppIcon(
+              icon: AppIcons.notification_outline,
+              size: 26.0,
+              color: AppColors.grey,
+            ),
+            selectedIcon: AppIcon(
+              icon: AppIcons.notification,
+              size: 26.0,
+              color: AppColors.primaryDark,
+            ),
+            label: "Thông báo",
           ),
           NavigationDestination(
             icon: AppIcon(

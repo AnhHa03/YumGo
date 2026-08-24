@@ -29,17 +29,20 @@ class _OrdersScreenState extends State<OrdersScreen> {
           ),
 
           actions: [
-            IconButton(
-              onPressed: () {
+            GestureDetector(
+              onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => OrderSearchScreen()),
                 );
               },
-              icon: AppIcon(
-                icon: AppIcons.search,
-                size: 30.0,
-                color: AppColors.primaryDark,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: AppIcon(
+                  icon: AppIcons.search,
+                  size: 30.0,
+                  color: AppColors.primaryDark,
+                ),
               ),
             ),
           ],
