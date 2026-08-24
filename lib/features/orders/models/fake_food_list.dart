@@ -44,9 +44,9 @@ final List<Food> foods = [
 ];
 
 final List<Order> orders = [
-  Order(order_id: "#23964-3325753", name: "name"),
-  Order(order_id: "#25753-0364452", name: "shop name"),
-  Order(order_id: "#25753-0364452", name: "shop"),
-  Order(order_id: "#25753-0364452", name: "name_shop"),
-  Order(order_id: "#25753-0364452", name: "text"),
+  // Order(order_id: "#23964-3325753", name: "name"),
+  // Order(order_id: "#25753-0364452", name: "shop name"),
+  // Order(order_id: "#25753-0364452", name: "shop"),
+  // Order(order_id: "#25753-0364452", name: "name_shop"),
+  // Order(order_id: "#25753-0364452", name: "text"),
 ];
