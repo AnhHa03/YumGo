@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yumgo/core/theme/app_colors.dart';
 import 'package:yumgo/core/theme/constants/app_icons.dart';
-import 'package:yumgo/features/profile/ui/settings_screen.dart';
+import 'package:yumgo/features/settings/ui/settings_screen.dart';
 import 'package:yumgo/features/profile/widgets/setting_item.dart';
 
 class ProfileSettings extends StatelessWidget {
