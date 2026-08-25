@@ -24,4 +24,6 @@ class AppImages {
   static const String yumgo_logo = 'assets/images/yumgo_logo.png';
   static const String non_notification = 'assets/images/non_notification.png';
   static const String no_order = 'assets/images/no_order.png';
+  static const String background_profile =
+      'assets/images/background_profile.jpg';
 }

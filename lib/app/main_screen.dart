@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:yumgo/core/theme/app_colors.dart';
 import 'package:yumgo/core/theme/constants/app_icons.dart';
-import 'package:yumgo/features/account/ui/account_screen.dart';
 import 'package:yumgo/features/home/ui/home_screen.dart';
 import 'package:yumgo/features/notifications/ui/notifications_screen.dart';
 import 'package:yumgo/features/orders/ui/orders_screen.dart';
+import 'package:yumgo/features/profile/ui/profile_screen.dart';
 import 'package:yumgo/widgets/app_icon.dart';
 
 class MainScreen extends StatefulWidget {
@@ -19,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
     HomeScreen(),
     OrdersScreen(),
     NotificationsScreen(),
-    AccountScreen(),
+    ProfileScreen(),
   ];
   int _selectedIndex = 0;
 

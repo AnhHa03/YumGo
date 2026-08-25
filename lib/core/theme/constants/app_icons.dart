@@ -24,4 +24,12 @@ class AppIcons {
   static const String notification = 'assets/icons/notification.svg';
   static const String notification_outline =
       'assets/icons/notification_outline.svg';
+  static const String location_01_outline =
+      'assets/icons/location_01_outline.svg';
+  static const String setting_outline = 'assets/icons/setting_outline.svg';
+  static const String wallet_outline = 'assets/icons/wallet_outline.svg';
+  static const String globe_outline = 'assets/icons/globe_outline.svg';
+  static const String help_outline = 'assets/icons/help_outline.svg';
+  static const String store_outline = 'assets/icons/store_outline.svg';
+  static const String voucher_outline = 'assets/icons/voucher_outline.svg';
 }
