@@ -4,7 +4,8 @@ import 'package:yumgo/core/theme/constants/app_icons.dart';
 import 'package:yumgo/widgets/app_icon.dart';
 
 class AppSettings extends StatelessWidget {
-  const AppSettings({super.key});
+  final VoidCallback onTapLanguage;
+  const AppSettings({super.key, required this.onTapLanguage});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class AppSettings extends StatelessWidget {
           ),
           child: Column(
             children: [
-              AppSettingsItem(() {}, "Ngôn ngữ", "Tiếng Việt", true),
+              AppSettingsItem(onTapLanguage, "Ngôn ngữ", "Tiếng Việt", true),
               Divider(thickness: 0.2, color: AppColors.greyLight),
               AppSettingsItem(() {}, "Chế độ", "Sáng", false),
             ],
@@ -47,9 +48,7 @@ class AppSettings extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 6, bottom: 6),
       child: GestureDetector(
-        onTap: () {
-          // change mode
-        },
+        onTap: onTapSetting,
         child: Row(
           children: [
             Text(

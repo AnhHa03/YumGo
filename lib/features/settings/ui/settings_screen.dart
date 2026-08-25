@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yumgo/core/theme/app_colors.dart';
+import 'package:yumgo/features/settings/ui/language_settings.dart';
 import 'package:yumgo/features/settings/widgets/app_settings.dart';
 import 'package:yumgo/features/settings/widgets/support_policy.dart';
 
@@ -18,7 +19,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
       appBar: AppBar(title: Text("Cài đặt")),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(children: [AppSettings(), SupportPolicy()]),
+        child: Column(
+          children: [
+            AppSettings(
+              onTapLanguage: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => LanguageSettings()),
+                );
+              },
+            ),
+            SupportPolicy(),
+          ],
+        ),
       ),
     );
   }

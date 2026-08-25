@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yumgo/core/localization/app_locales.dart';
 import 'package:yumgo/core/theme/app_theme.dart';
 import 'package:yumgo/features/home/data/fake_restaurants_list.dart';
 import 'package:yumgo/app/main_screen.dart';

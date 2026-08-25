@@ -32,4 +32,5 @@ class AppIcons {
   static const String help_outline = 'assets/icons/help_outline.svg';
   static const String store_outline = 'assets/icons/store_outline.svg';
   static const String voucher_outline = 'assets/icons/voucher_outline.svg';
+  static const String tick = 'assets/icons/tick.svg';
 }
